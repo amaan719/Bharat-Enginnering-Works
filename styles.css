@@ -129,6 +129,42 @@ body {
     transform: scale(1.05);
 }
 
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #25d366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background: #1ebe5d;
+    transform: scale(1.05);
+}
+
+.mobile-btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #25d366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.mobile-btn-whatsapp:hover {
+    background: #1ebe5d;
+}
+
 .mobile-menu-btn {
     display: block;
     background: none;
@@ -626,6 +662,16 @@ body {
 
 .cta-btn.secondary:hover {
     background: #065f46;
+    transform: scale(1.05);
+}
+
+.cta-btn.whatsapp {
+    background: white;
+    color: #16a34a;
+}
+
+.cta-btn.whatsapp:hover {
+    background: #ecfdf5;
     transform: scale(1.05);
 }
 
