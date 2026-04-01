@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Engineering Works - Excellence in Engineering</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo-section">
+                    <img src="logo.png" alt="Bharat Engineering Works" class="logo-img">
+                    <div class="logo-text">
+                        <h1 class="company-name">Bharat Engineering Works</h1>
+                        <p class="company-tagline">Excellence in Engineering</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="tel:+919997706447" class="btn-call">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>Call Now</span>
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <svg class="menu-icon" id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="close-icon hidden" id="closeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <nav class="mobile-nav hidden" id="mobileNav">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#services" class="mobile-nav-link">Services</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+                <a href="tel:+919997706447" class="mobile-btn-call">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span>Call Now</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="bg.jpeg" alt="Bharat Engineering Works" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content container">
+            <h1 class="hero-title fade-in">Bharat Engineering Works</h1>
+            <p class="hero-subtitle fade-in">Excellence in Fabrication & Erection</p>
+            <p class="hero-description fade-in">Specialists in Modern Rice Mill and Sortex Plant</p>
+            <div class="hero-buttons fade-in">
+                <a href="tel:+919997706447" class="hero-btn primary">Contact Us: +91 9997706447</a>
+                <a href="mailto:bharatengineeringworks47@gmail.com" class="hero-btn secondary">Email Us</a>
+            </div>
+            <div class="scroll-indicator">
+                <svg class="chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Comprehensive engineering solutions for all your fabrication and erection needs</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon wheat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 22L16 8"></path>
+                            <path d="M16 8V2"></path>
+                            <path d="M16 8H22"></path>
+                            <path d="M9 7L7 9"></path>
+                            <path d="M13 11L11 13"></path>
+                            <path d="M17 15L15 17"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Rice Mill</h3>
+                    <p class="service-description">Complete rice milling solutions with modern technology and efficient processing systems.</p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon dall">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Dall Mill</h3>
+                    <p class="service-description">Advanced dall milling equipment for high-quality pulse processing and production.</p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon oil">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Oil Mill</h3>
+                    <p class="service-description">State-of-the-art oil extraction and processing machinery for maximum yield.</p>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon flower">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 4v1m0 14v1M4 12h1m14 0h1m-4.93-5.07l.71.71M7.22 16.78l.71.71m9.86 0l-.71.71M7.93 7.22l-.71.71"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Flower Mill</h3>
+                    <p class="service-description">Specialized flower milling equipment for diverse grain processing needs.</p>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon compost">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Compost & Fertilizer</h3>
+                    <p class="service-description">Athonol plant setup for organic compost and fertilizer production.</p>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon modern">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 1v6m0 6v6M5.6 5.6l4.2 4.2m4.2 4.2l4.2 4.2M1 12h6m6 0h6M5.6 18.4l4.2-4.2m4.2-4.2l4.2-4.2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Modern Rice Mill</h3>
+                    <p class="service-description">Specialization in modern rice mill installation with advanced automation.</p>
+                </div>
+
+                <!-- Service Card 7 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon sortex">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Sortex Plant</h3>
+                    <p class="service-description">Expert installation and maintenance of sortex plant for superior grain sorting.</p>
+                </div>
+
+                <!-- Service Card 8 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="service-icon fabrication">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Fabrication & Erection</h3>
+                    <p class="service-description">All kinds of fabrication and erection works with precision and quality.</p>
+                </div>
+            </div>
+
+            <!-- Specialization Banner -->
+            <div class="specialization-banner" data-aos="zoom-in">
+                <h3 class="banner-title">Our Specialization</h3>
+                <p class="banner-subtitle">Modern Rice Mill & Sortex Plant</p>
+                <p class="banner-description">
+                    With years of expertise and dedication, we specialize in installing and maintaining modern rice mills 
+                    and sortex plants, ensuring optimal performance and reliability for your business.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Get in touch with us for all your engineering needs</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Card 1 -->
+                <div class="contact-card" data-aos="fade-right">
+                    <div class="contact-icon owner">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <h3 class="contact-title">Owner</h3>
+                        <p class="contact-text">Sajid Ahmad</p>
+                    </div>
+                </div>
+
+                <!-- Contact Card 2 -->
+                <div class="contact-card" data-aos="fade-right" data-aos-delay="100">
+                    <div class="contact-icon phone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <h3 class="contact-title">Phone</h3>
+                        <a href="tel:+919997706447" class="contact-link">+91 9997706447</a>
+                    </div>
+                </div>
+
+                <!-- Contact Card 3 -->
+                <div class="contact-card" data-aos="fade-left" data-aos-delay="200">
+                    <div class="contact-icon email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="M22 7l-10 6L2 7"></path>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <h3 class="contact-title">Email</h3>
+                        <a href="mailto:bharatengineeringworks47@gmail.com" class="contact-link">bharatengineeringworks47@gmail.com</a>
+                    </div>
+                </div>
+
+                <!-- Contact Card 4 -->
+                <div class="contact-card" data-aos="fade-left" data-aos-delay="300">
+                    <div class="contact-icon pan">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                            <line x1="2" y1="10" x2="22" y2="10"></line>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <h3 class="contact-title">PAN</h3>
+                        <p class="contact-text">BIZP3884L</p>
+                    </div>
+                </div>
+
+                <!-- Contact Card 5 - Full Width -->
+                <div class="contact-card full-width" data-aos="fade-up" data-aos-delay="400">
+                    <div class="contact-icon address">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <h3 class="contact-title">Address</h3>
+                        <p class="contact-text">Ward No 12 Gali Maliyan Near Risikul School Baraut U.P. India (250611)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="cta-banner" data-aos="zoom-in">
+                <h3 class="cta-title">Ready to Get Started?</h3>
+                <p class="cta-description">
+                    Contact us today for a consultation and discover how we can help your business grow
+                </p>
+                <div class="cta-buttons">
+                    <a href="tel:+919997706447" class="cta-btn primary">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>Call Now</span>
+                    </a>
+                    <a href="mailto:bharatengineeringworks47@gmail.com" class="cta-btn secondary">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="M22 7l-10 6L2 7"></path>
+                        </svg>
+                        <span>Send Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <img src="logo.png" alt="Bharat Engineering Works" class="footer-logo">
+                    <h3 class="footer-title">Bharat Engineering Works</h3>
+                    <p class="footer-text">Leading provider of fabrication and erection works, specializing in modern rice mills and sortex plants.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="#services" class="footer-link">Services</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>Owner: Sajid Ahmad</li>
+                        <li><a href="tel:+919997706447" class="footer-link">+91 9997706447</a></li>
+                        <li><a href="mailto:bharatengineeringworks47@gmail.com" class="footer-link">bharatengineeringworks47@gmail.com</a></li>
+                        <li>PAN: BIZP3884L</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Bharat Engineering Works. All rights reserved.</p>
+                <p>Ward No 12 Gali Maliyan Near Risikul School Baraut U.P. India (250611)</p>
+                <img src="developer-logo.jpeg" alt="" class="developer-logo">
+                <p>Developed by: Amaan Web Tech</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
