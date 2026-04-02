@@ -5,6 +5,37 @@ const mobileNav = document.getElementById('mobileNav');
 const menuIcon = document.getElementById('menuIcon');
 const closeIcon = document.getElementById('closeIcon');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+const themeToggle = document.getElementById('themeToggle');
+const themeToggleText = themeToggle?.querySelector('.theme-toggle-text');
+const themeToggleIcon = themeToggle?.querySelector('.theme-toggle-icon');
+
+function setTheme(theme) {
+    document.body.classList.toggle('dark', theme === 'dark');
+    if (themeToggleText) {
+        themeToggleText.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    }
+    if (themeToggleIcon) {
+        themeToggleIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+}
+
+function getPreferredTheme() {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+        return storedTheme;
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const nextTheme = document.body.classList.contains('dark') ? 'light' : 'dark';
+        setTheme(nextTheme);
+        localStorage.setItem('theme', nextTheme);
+    });
+}
+
+setTheme(getPreferredTheme());
 
 // Set current year in footer
 document.getElementById('currentYear').textContent = new Date().getFullYear();
