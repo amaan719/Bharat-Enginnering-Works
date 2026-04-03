@@ -979,6 +979,48 @@ body.dark {
     color: #e2e8f0;
 }
 
+/* Responsive developer section */
+@media (max-width: 767px) {
+    .developer-section {
+        padding-top: 1rem;
+    }
+
+    .developer-info {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0.75rem;
+    }
+
+    .developer-left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .developer-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+
+    .developer-contact {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+
+    .contact-label {
+        font-size: 0.85rem;
+    }
+
+    .contact-developer-btn {
+        width: 44px;
+        height: 44px;
+    }
+}
+
 body.dark .theme-toggle {
     background: rgba(255, 255, 255, 0.1);
     color: #e2e8f0;
