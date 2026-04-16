@@ -116,8 +116,8 @@ body {
 }
 
 .logo-img {
-    height: 3rem;
-    width: auto;
+    height: 4rem;
+    width: 3rem;
 }
 
 .logo-text {
@@ -750,7 +750,7 @@ body {
 
 .footer-logo {
     height: 4rem;
-    width: auto;
+    width: 3rem;
     margin-bottom: 1rem;
 }
 
