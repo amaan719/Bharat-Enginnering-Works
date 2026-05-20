@@ -406,7 +406,7 @@ if (quoteForm) {
         const body = encodeURIComponent(
             `Name: ${name}\nPhone: ${phone}\nService: ${service}\nMessage: ${message || 'N/A'}`
         );
-        window.location.href = `mailto:tahirbharat34@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:bharatenginneringworks47@gmail.com?subject=${subject}&body=${body}`;
         quoteForm.reset();
         closeQuoteModal();
     });
