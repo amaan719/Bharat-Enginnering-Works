@@ -329,6 +329,14 @@
                         </svg>
                         <span>WhatsApp</span>
                     </a>
+                    <a href="#" class="cta-btn quote" id="openQuoteBtn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                            <rect x="8" y="2" width="8" height="4" rx="1"></rect>
+                            <path d="M8 11h8M8 15h8"></path>
+                        </svg>
+                        <span>Request Quote</span>
+                    </a>
                     <a href="mailto:bharatenginneringworks47@gmail.com" class="cta-btn secondary">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="2" y="4" width="20" height="16" rx="2"></rect>
@@ -402,6 +410,45 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal-overlay hidden" id="quoteModal">
+        <div class="modal">
+            <button class="modal-close" id="closeQuoteBtn" aria-label="Close quote form">&times;</button>
+            <div class="modal-header">
+                <h3>Request a Free Quote</h3>
+                <p>Tell us about your project and we will respond quickly.</p>
+            </div>
+            <form id="quoteForm" class="quote-form">
+                <div class="form-row">
+                    <label for="quoteName">Name</label>
+                    <input type="text" id="quoteName" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-row">
+                    <label for="quotePhone">Phone</label>
+                    <input type="tel" id="quotePhone" name="phone" placeholder="+91 7869776447" required>
+                </div>
+                <div class="form-row">
+                    <label for="quoteService">Service</label>
+                    <select id="quoteService" name="service" required>
+                        <option value="">Select service</option>
+                        <option value="Rice Mill">Rice Mill</option>
+                        <option value="Dall Mill">Dall Mill</option>
+                        <option value="Oil Mill">Oil Mill</option>
+                        <option value="Flower Mill">Flower Mill</option>
+                        <option value="Compost & Fertilizer">Compost & Fertilizer</option>
+                        <option value="Modern Rice Mill">Modern Rice Mill</option>
+                        <option value="Sortex Plant">Sortex Plant</option>
+                        <option value="Fabrication & Erection">Fabrication & Erection</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="quoteMessage">Message</label>
+                    <textarea id="quoteMessage" name="message" rows="4" placeholder="Describe your requirement"></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Quote Request</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

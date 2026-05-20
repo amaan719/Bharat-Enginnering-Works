@@ -349,6 +349,69 @@ footerSections.forEach(section => {
 console.log('%c Welcome to Bharat Engineering Works! ', 'background: #2563eb; color: white; font-size: 16px; padding: 10px;');
 console.log('%c We specialize in Modern Rice Mill & Sortex Plant ', 'background: #10b981; color: white; font-size: 14px; padding: 8px;');
 
+const openQuoteBtn = document.getElementById('openQuoteBtn');
+const quoteModal = document.getElementById('quoteModal');
+const closeQuoteBtn = document.getElementById('closeQuoteBtn');
+const quoteForm = document.getElementById('quoteForm');
+
+function openQuoteModal() {
+    if (!quoteModal) return;
+    quoteModal.classList.remove('hidden');
+    document.body.classList.add('modal-open');
+    const quoteName = document.getElementById('quoteName');
+    if (quoteName) quoteName.focus();
+}
+
+function closeQuoteModal() {
+    if (!quoteModal) return;
+    quoteModal.classList.add('hidden');
+    document.body.classList.remove('modal-open');
+}
+
+if (openQuoteBtn) {
+    openQuoteBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openQuoteModal();
+    });
+}
+
+if (closeQuoteBtn) {
+    closeQuoteBtn.addEventListener('click', closeQuoteModal);
+}
+
+if (quoteModal) {
+    quoteModal.addEventListener('click', (e) => {
+        if (e.target === quoteModal) {
+            closeQuoteModal();
+        }
+    });
+}
+
+if (quoteForm) {
+    quoteForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(quoteForm);
+        const name = formData.get('name')?.toString().trim();
+        const phone = formData.get('phone')?.toString().trim();
+        const service = formData.get('service')?.toString().trim();
+        const message = formData.get('message')?.toString().trim();
+
+        if (!name || !phone || !service) {
+            alert('Please fill in your name, phone, and service requirement.');
+            return;
+        }
+
+        const subject = encodeURIComponent(`Quote Request from ${name}`);
+        const body = encodeURIComponent(
+            `Name: ${name}\nPhone: ${phone}\nService: ${service}\nMessage: ${message || 'N/A'}`
+        );
+        window.location.href = `mailto:tahirbharat34@gmail.com?subject=${subject}&body=${body}`;
+        quoteForm.reset();
+        closeQuoteModal();
+    });
+}
+
 // Add page visibility change handler
 document.addEventListener('visibilitychange', () => {
     if (document.hidden) {

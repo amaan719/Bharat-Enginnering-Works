@@ -716,6 +716,131 @@ body {
     transform: scale(1.05);
 }
 
+.cta-btn.quote {
+    background: #f59e0b;
+    color: white;
+}
+
+.cta-btn.quote:hover {
+    background: #d97706;
+    transform: scale(1.05);
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 2000;
+}
+
+.modal {
+    width: 100%;
+    max-width: 560px;
+    background: white;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.18);
+}
+
+body.dark .modal {
+    background: #111827;
+    color: white;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background: transparent;
+    color: #374151;
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+.modal-header h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+}
+
+.modal-header p {
+    margin-bottom: 1.5rem;
+    color: #6b7280;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-row label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    border: 1px solid #d1d5db;
+    border-radius: 0.85rem;
+    padding: 0.95rem 1rem;
+    font-size: 1rem;
+    color: #111827;
+    background: #f8fafc;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+body.dark .form-row input,
+body.dark .form-row select,
+body.dark .form-row textarea {
+    background: #1f2937;
+    border-color: #374151;
+    color: #f9fafb;
+}
+
+.form-submit {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border-radius: 0.85rem;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.form-submit:hover {
+    background: #1d4ed8;
+    transform: scale(1.02);
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 640px) {
+    .modal {
+        padding: 1.25rem;
+    }
+}
+
 /* Footer */
 .footer {
     background: #111827;
