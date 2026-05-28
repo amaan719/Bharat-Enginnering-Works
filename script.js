@@ -345,6 +345,89 @@ footerSections.forEach(section => {
     footerObserver.observe(section);
 });
 
+function initializeGallery() {
+    const galleryGrid = document.getElementById('galleryGrid');
+    const gallerySummary = document.getElementById('gallerySummary');
+
+    if (!galleryGrid) return;
+
+    const galleryFiles = Array.from({ length: 28 }, (_, index) => `img${index + 1}.jpg`);
+
+    galleryGrid.innerHTML = galleryFiles.map((file, index) => `
+        <article class="gallery-card" data-aos="fade-up">
+            <div class="gallery-image-wrap">
+                <img src="images/${file}" alt="Client photo ${index + 1}" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-content">
+                <p class="gallery-caption">Client Photo ${index + 1}</p>
+                <button type="button" class="gallery-view-btn" data-image="images/${file}" data-caption="Client Photo ${index + 1}">View</button>
+            </div>
+        </article>
+    `).join('');
+
+    if (gallerySummary) {
+        gallerySummary.textContent = `${galleryFiles.length} photos available in the gallery.`;
+    }
+
+    const openButtons = galleryGrid.querySelectorAll('.gallery-view-btn');
+    const galleryModal = document.createElement('div');
+    galleryModal.className = 'gallery-modal hidden';
+    galleryModal.innerHTML = `
+        <div class="gallery-modal-dialog" role="dialog" aria-modal="true" aria-label="Expanded gallery image">
+            <button type="button" class="gallery-modal-close" aria-label="Close gallery viewer">&times;</button>
+            <img class="gallery-modal-image" src="" alt="Expanded gallery image">
+            <div class="gallery-modal-footer">
+                <p class="gallery-modal-caption"></p>
+                <p class="gallery-modal-subtitle">Click the close button or press ESC to close</p>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(galleryModal);
+
+    const galleryModalImage = galleryModal.querySelector('.gallery-modal-image');
+    const galleryModalCaption = galleryModal.querySelector('.gallery-modal-caption');
+
+    function openGalleryModal(imageSrc, caption) {
+        galleryModalImage.src = imageSrc;
+        galleryModalImage.alt = caption;
+        galleryModalCaption.textContent = caption;
+        galleryModal.classList.remove('hidden');
+        document.body.classList.add('modal-open');
+    }
+
+    function closeGalleryModal() {
+        galleryModal.classList.add('hidden');
+        document.body.classList.remove('modal-open');
+    }
+
+    galleryGrid.querySelectorAll('.gallery-card').forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.08}s`;
+        observer.observe(card);
+    });
+
+    openButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            openGalleryModal(button.dataset.image, button.dataset.caption);
+        });
+    });
+
+    galleryModal.addEventListener('click', (event) => {
+        if (event.target === galleryModal) {
+            closeGalleryModal();
+        }
+    });
+
+    galleryModal.querySelector('.gallery-modal-close').addEventListener('click', closeGalleryModal);
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !galleryModal.classList.contains('hidden')) {
+            closeGalleryModal();
+        }
+    });
+}
+
+initializeGallery();
+
 // Console welcome message
 console.log('%c Welcome to Bharat Engineering Works! ', 'background: #2563eb; color: white; font-size: 16px; padding: 10px;');
 console.log('%c We specialize in Modern Rice Mill & Sortex Plant ', 'background: #10b981; color: white; font-size: 14px; padding: 8px;');
