@@ -359,8 +359,8 @@ function initializeGallery() {
                 <img src="images/${file}" alt="Client photo ${index + 1}" loading="lazy" decoding="async">
             </div>
             <div class="gallery-card-content">
-                <p class="gallery-caption">Client Photo ${index + 1}</p>
-                <button type="button" class="gallery-view-btn" data-image="images/${file}" data-caption="Client Photo ${index + 1}">View</button>
+                <p class="gallery-caption"> </p>
+                <button type="button" class="gallery-view-btn" data-image="images/${file}" data-caption="Photo ${index + 1}">View</button>
             </div>
         </article>
     `).join('');
